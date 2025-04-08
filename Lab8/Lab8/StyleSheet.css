@@ -1,0 +1,138 @@
+
+body {
+  font-family: Times New Roman;
+  margin: 0px;
+}
+
+h3 {
+  color: red;
+}
+
+h4 {
+  color: red;
+}
+
+ol {
+  counter-reset: my-counter;
+}
+
+ol li {
+  counter-increment: my-counter;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+ol li:before {
+  content: "("counter(my-counter, lower-roman)")";
+  position: absolute;
+  left: 0;
+}
+#firstNameTextBox {
+  margin-left: 300px; /* Or a suitable value */
+}
+#lastNameTextBox {
+  margin-left: 302px; /* Or a suitable value */
+}
+#telnumberTextBox{
+  margin-left: 235px; /* Or a suitable value */
+}
+#emailTextBox{
+  margin-left: 342px; /* Or a suitable value */
+}
+#BirthDayTextBox{
+  margin-left: 365px; /* Or a suitable value */
+}
+#profession{
+  margin-left: 295px; /* Or a suitable value */
+}
+#sportresult{
+  margin-left: 270px; /* Or a suitable value */
+}
+#input[type="text"] {
+  margin-right: 40px; /*  */
+}
+
+#inputForm #firstNameTextBox {
+     margin-left: 0;
+}
+#inputForm #lastNameTextBox {
+    margin-left: 0;
+}
+#inputForm #telnumberTextBox {
+    margin-left: 0;;
+}
+#inputForm #emailTextBox {
+    margin-left: 0;
+}
+#inputForm #BirthDayTextBox {
+    margin-left: 0;
+}
+#inputForm #profession {
+    margin-left: 0;
+}
+#inputForm #sportresult {
+    margin-left: 0;
+}
+#container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 100%;
+  padding-left: 0; /* 显式设置左内边距为 0 */
+  margin-left: 0;  /* 显式设置左外边距为 0 */
+}
+
+#header
+{
+	background-color: azure;
+	font-size: 15pt;
+    color: black;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+
+#menu {
+  background-color: azure;
+  font-size: 15pt;
+  color: black;
+  width: 65%; /* 95% for a whitespace gap between content. */
+  text-align: left;
+  padding-left: 30%; /* 30% here is hwy we do 65% above, because the 30% pushes the 65% outwards ot make 95% total */
+  line-height: 5;
+  /*margin: 10px 10px 10px 0;  */
+  grid-column: 1;
+}
+
+#content {
+  font-size: 15pt;
+  height: auto;
+  width: 95%;
+  min-height: 85%;
+  text-align: left;
+  background-color: mistyrose;
+  /*margin-left: 10%; */
+  grid-column: 2;
+  padding : 1.5rem;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#footer 
+{
+	position: fixed;
+	bottom: 0px;
+    background-color: azure;
+    color: black;
+    clear: both;
+    font-size: 25pt;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
