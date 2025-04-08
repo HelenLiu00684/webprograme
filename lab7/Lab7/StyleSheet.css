@@ -1,0 +1,88 @@
+
+body {
+  font-family: Times New Roman;
+  margin: 0px;
+}
+
+h3 {
+  color: green;
+}
+
+h4 {
+  color: red;
+}
+
+ol {
+  counter-reset: my-counter;
+}
+
+ol li {
+  counter-increment: my-counter;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+ol li:before {
+  content: "("counter(my-counter, lower-roman)")";
+  position: absolute;
+  left: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  width: 100%;
+}
+
+#header
+{
+	background-color: azure;
+	font-size: 18pt;
+    color: black;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+}
+
+
+#menu {
+  background-color: azure;
+  font-size: 10pt;
+  color: black;
+  width: 10%;
+  text-align: center;
+  float: left;
+  padding: 10px;
+  line-height: 5;
+  margin: 10px 10px 10px 0;
+}
+
+#content {
+  font-size: 15pt;
+  height: auto;
+  width: 90%;
+  min-height: 100%;
+  text-align: left;
+  background-color: mistyrose;
+  margin-left: 10%; /* 将 content 向右移动，使其与 menu 并排显示 */
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#footer 
+{
+	position: fixed;
+	bottom: 0px;
+    background-color: azure;
+    color: black;
+    clear: both;
+    font-size: 25pt;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
